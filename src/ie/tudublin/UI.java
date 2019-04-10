@@ -2,6 +2,8 @@ package ie.tudublin;
 
 import java.util.ArrayList;
 
+import com.sun.xml.internal.ws.wsdl.writer.document.OpenAtts;
+
 import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
@@ -27,11 +29,32 @@ public class UI extends PApplet
 		separate(92);
 	}
 
+	public void loadColours()
+	{
+		String k = Read("data\colours.csv"); 
+		for(int i = 0,i < len(k), i++)
+		{
+			colours[i] = Read("data\colours.csv",1); 
+		}
+	}
+
+	public void printColours()
+	{
+		for (String colo : colours[]) {
+			System.out.println("Colour:" + colo);
+		}
+	}
+
 	public void setup() 
 	{
 	}
 	
+	//     ************
+	//  **** $ $ $    *****  %%%
+	//     ************	
+
 	public void draw()
 	{			
+		
 	}
 }
