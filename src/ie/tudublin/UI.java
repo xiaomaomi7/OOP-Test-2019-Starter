@@ -18,6 +18,7 @@ public class UI extends PApplet
 		print(hundreds + ",");
 		print(tens + ",");
 		println(ones);
+		Resistor re = new Resistor(value,ones, tens, hundreds);
 	}
 	ArrayList colours[] =  new Arraylist Colour();
 	public void settings()
@@ -43,6 +44,10 @@ public class UI extends PApplet
 		for (String colo : colours[]) {
 			System.out.println("Colour:" + colo);
 		}
+	}
+	public Colour findColor(int value)
+	{
+
 	}
 
 	public void setup() 
