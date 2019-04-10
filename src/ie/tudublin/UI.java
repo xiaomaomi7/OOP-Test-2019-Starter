@@ -17,7 +17,7 @@ public class UI extends PApplet
 		print(tens + ",");
 		println(ones);
 	}
-
+	ArrayList colours[] =  new Arraylist Colour();
 	public void settings()
 	{
 		size(500, 800);
