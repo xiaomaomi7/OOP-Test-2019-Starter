@@ -47,19 +47,46 @@ public class UI extends PApplet
 	}
 	public Colour findColor(int value)
 	{
-
+		return colours[value];
 	}
 
+	//     ************
+	//  **** $ $ $    *****  %%%
+	//     ************	
+	public void render()
+	{
+		int no = 4;
+		int x = width / 3;
+		int y = height / 5;
+		int squareL = width /5;
+		int fbL = squareL / 2;
+		for(int i = 1, i < no +1,i++){
+			stroke(255);
+			line(x, y, x + fbL, y);
+			line(x + squareL, y, x + squareL + fbL, y);
+			line(x + fbL, y - 1/2 * squareL,x + squareL + fbL, y - 1/2 * squareL);
+			line(x + fbL, y - 1/2 * squareL,x + fbL, y + 1/2 * squareL);
+			line(x + fbL, y + 1/2 * squareL,x + squareL+ fbL, y + 1/2 * squareL);
+			line(x + squareL + fbL, y - 1/2 * squareL,x + squareL+ fbL, y + 1/2 * squareL);
+			stroke(colours[1]);
+			line( x + fbL + squareL / 10 *1, y - 1/2 * squareL,x + fbL + squareL / 10 *1, y + 1/2 * squareL );
+			stroke(colours[2]);
+			line( x + fbL + squareL / 10 *3, y - 1/2 * squareL,x + fbL + squareL / 10 *1, y + 1/2 * squareL );
+			stroke(colours[3]);
+			line( x + fbL + squareL / 10 *5, y - 1/2 * squareL,x + fbL + squareL / 10 *1, y + 1/2 * squareL );
+			text(resistor[i], width * 9 / 10 , y);
+			y++;
+		}
+		
+	}
 	public void setup() 
 	{
 	}
 	
-	//     ************
-	//  **** $ $ $    *****  %%%
-	//     ************	
+
 
 	public void draw()
 	{			
-		
+		render();
 	}
 }
